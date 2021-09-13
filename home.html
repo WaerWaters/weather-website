@@ -11,7 +11,14 @@
 		<nav>
 			<ul>
 				<li><a href="city.html">Logo</a></li>
-				<li><a>dropdown menu</a></li>
+				<div>
+					<button onclick="dropFunction()" class="dropbtn">Dropdown</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#">link 1</a>
+						<a href="#">link 2</a>
+						<a href="#">link 3</a>
+					</div>
+				</div>
 			</ul>
 			<input id="city-input" list="cities" type="text" placeholder="city">
 			<datalist id="cities">

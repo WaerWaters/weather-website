@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dav</title>
+</head>
+	<body>
+		<script src="API.js" defer></script>
+		<nav>
+			<ul>
+				<li><a href="home.html">Logo</a></li>
+				<li><a>dropdown menu</a></li>
+			</ul>
+			<input id="city-input" list="cities" type="text" placeholder="city">
+			<datalist id="cities">
+				<option id="closest-match" value=""></option>
+				<option id="closest-match" value=""></option>
+				<option id="closest-match" value=""></option>
+			</datalist>
+			<button id="confirm">Confirm</button>
+			<img id="nav-background" src="pictures/stormcloud 2.0.jpg" width=1200 height=300>
+		</nav>
+		
+		<br>
+		<div id="weather-data">
+			<h1 id="city"></h1>
+			<h2 id="headline"></h2>
+			<h2 id="day"></h2>
+			<h3 id="weather"></h3>
+			<ul>
+				<h3 id="temperatureHigh"></h3>
+				<h3 id="temperatureLow"></h3>
+			</ul>
+		</div>
+	</body>
+</html>

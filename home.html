@@ -10,26 +10,30 @@
 	<body>
 		<script src="accuweather_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
-		<nav>
-			<ul>
-				<li><a href="city.html">Logo</a></li>
-				<div>
-					<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="25" height="25" alt="shit"/>
-					<div id="dropdown" class="dropdown-content">
-						<a href="#">link 1</a>
-						<a href="#">link 2</a>
-						<a href="#">link 3</a>
+		<nav id="nav">
+			<div id="top-nav">
+				<ul>
+					<li>Logo</li>
+					<div>
+						<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="25" height="25" alt="shit"/>
+						<div id="dropdown" class="dropdown-content">
+							<a href="#">link 1</a>
+							<a href="#">link 2</a>
+							<a href="#">link 3</a>
+						</div>
 					</div>
-				</div>
-			</ul>
-			<input id="city-input" list="cities" type="text" placeholder="city">
-			<datalist id="cities">
-				<option id="closest-match" value=""></option>
-				<option id="closest-match" value=""></option>
-				<option id="closest-match" value=""></option>
-			</datalist>
-			<button id="confirm"><a href="city.html">Confirm</a></button>
-			<img id="nav-background" src="pictures/stormcloud 2.0.jpg" width=1200 height=300>
+				</ul>
+			</div>
+			<div id="bot-nav">
+				<input id="city-input" list="cities" type="text" placeholder="city">
+				<datalist id="cities">
+					<option id="closest-match" value=""></option>
+					<option id="closest-match" value=""></option>
+					<option id="closest-match" value=""></option>
+				</datalist>
+				<button id="confirm"><a href="city.html">Confirm</a></button>
+				<img id="nav-background" src="pictures/stormcloud 2.0.jpg" width=1200 height=300>
+			</div>
 		</nav>
 	</body>
 </html>

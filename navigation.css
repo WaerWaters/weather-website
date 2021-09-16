@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: Verdana;
 }
 
 .top-nav-ul {
@@ -9,6 +10,10 @@ body {
     padding: 0;
     overflow: hidden;
     height: 51px;
+
+    display: flex;
+    justify-content: center;
+
 }
 
 .top-nav-li {
@@ -17,6 +22,18 @@ body {
 
 .logo {
     padding: 5px;
+    border-radius: 100%;
+}
+
+.top-nav-text-holder {
+    margin: auto;
+    margin-left: 20px;
+}
+
+.top-nav-text {
+    margin: auto;
+    text-align: center;
+    
 }
 
 /* dropdown menu */

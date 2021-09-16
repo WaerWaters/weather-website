@@ -1,5 +1,18 @@
-.top-nav {
+body {
+    margin: 0px;
+}
+
+.top-nav-ul {
     background-color: #72756C;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 51px;
+}
+
+.top-nav-li {
+    float: left;
 }
 
 .bot-nav {
@@ -16,9 +29,7 @@
 .dropbtn {
     background-color: #72756C;
     color: white;
-    padding: 6px;
-    font-size: 10px;
-    border: none;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -34,6 +45,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 0;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

@@ -13,11 +13,6 @@ const APIKey = "ufDZJwfr9wCVbbCgmY4y8oQl3SwZDMEX";
 confirm.addEventListener("click", onClick);
 
 
-closestMatch.value = "dav"
-
-closestMatch.value = "dav2"
-
-
 async function onClick() {
 	try {
 		const locationData = await getLocationKey(cityInput.value);

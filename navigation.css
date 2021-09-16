@@ -6,14 +6,16 @@ body {
 .top-nav-ul {
     background-color: #72756C;
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
+
     overflow: hidden;
-    height: 51px;
+    height: 50px;
 
     display: flex;
     justify-content: center;
 
+    border-bottom: 2px solid #4B4844;
 }
 
 .top-nav-li {
@@ -26,6 +28,8 @@ body {
 }
 
 .top-nav-text-holder {
+    color: #4B4844;
+
     margin: auto;
     margin-left: 20px;
 }
@@ -79,12 +83,25 @@ body {
 }
 
 .bot-nav {
-    background-color: #91e5f6;
-    min-height: 200px;
+    margin: auto;
+
+    background: rgb(145,229,246);
+    background: linear-gradient(0deg, rgba(145,229,246,1) 0%, rgba(255,230,109,1) 100%);
+    height: 200px;
 }
 
 .search-bar {
+    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
     position: relative;
-    top: 75px; left: 35%;
+    align-items: center;
+
+
+    
 }
+
 

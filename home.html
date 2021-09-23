@@ -7,10 +7,11 @@
 		<title>StormClout</title>
 		<link rel="stylesheet" href="navigation.css">
 	</head>
-	<body>
+	<body onLoad="locater()">
 		<script src="accuweather_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
 		<script src="search.js" defer></script>
+		<script src="locater_getter.js" defer></script>
 		<nav id="nav">
 			<ul class="top-nav-ul">
 				<li class="top-nav-li"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></li>
@@ -29,7 +30,7 @@
 			<div class="bot-nav">
 				<div class="search-bar">
 					<input id="city-input" type="text" placeholder="city">
-					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures\loop.png" onclick="javascript:alert('Hello World!')"></div>
+					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures\loop.png" onclick=""></div>
 				</div>
 			</div>
 		</nav>

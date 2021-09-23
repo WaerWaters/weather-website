@@ -83,11 +83,7 @@ body {
 }
 
 .bot-nav {
-<<<<<<< HEAD
-    margin: auto;
-=======
     height: 200px;
->>>>>>> dbd42ad742e3c641af65eeb4db0f05edf3847e5f
 
     background: rgb(145,229,246);
     background: linear-gradient(0deg, rgba(145,229,246,1) 0%, rgba(255,230,109,1) 100%);

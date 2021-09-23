@@ -1,6 +1,5 @@
 const confirm = document.querySelector("#confirm")
 const cityInput = document.querySelector("#city-input")
-const cityElement = document.querySelector("#city")
 const weatherElement = document.querySelector("#weather")
 const tempElementHigh = document.querySelector("#temperatureHigh")
 const tempElementLow = document.querySelector("#temperatureLow")
@@ -10,17 +9,13 @@ const day = document.querySelector("#day")
 const count = [1,2,3,4,5]
 const APIKey = "ufDZJwfr9wCVbbCgmY4y8oQl3SwZDMEX";
 
-confirm.addEventListener("click", onClick);
 
-
-closestMatch.value = "dav"
-
-closestMatch.value = "dav2"
 
 
 async function onClick() {
 	try {
 		const locationData = await getLocationKey(cityInput.value);
+		console.log(locationData);
 		const weatherData = await getWeather(locationData[0].Key);
 		const tempDataHigh = await fahrenheitToCelcius(weatherData.DailyForecasts[0].Temperature.Maximum);
 		const tempDataLow = await fahrenheitToCelcius(weatherData.DailyForecasts[0].Temperature.Minimum);
@@ -35,8 +30,7 @@ async function onClick() {
 		tempElementLow.textContent = `${Math.floor(tempDataLow)}°C`
 		console.log(weatherData)
 	} catch {
-		if (cityInput.value == "") {
-			cityElement.textContent = `Enter a city name`
+		/*if (cityInput.value == "") {
 			clearUi(headLine);
 			clearUi(day);
 			clearUi(weatherElement);
@@ -49,13 +43,13 @@ async function onClick() {
 			clearUi(tempElementHigh);
 			clearUi(tempElementLow);
 			cityElement.textContent = `Could not find the city: ${cityInput.value}`
-		}
+		}*/
 	}
 }
 
-async function clearUi(data) {
+/*async function clearUi(data) {
 	data.textContent = "";
-}
+}*/
 
 async function getLocationKey(city) {
 	const response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${APIKey}&q=${city}`);

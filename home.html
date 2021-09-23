@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>StormClout</title>
-	<link rel="stylesheet" href="dropdownMenu.css">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>StormClout</title>
+		<link rel="stylesheet" href="navigation.css">
+	</head>
 	<body>
 		<script src="accuweather_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
-		<nav>
-			<ul>
-				<li><a href="city.html">Logo</a></li>
-				<div>
-					<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="25" height="25" alt="shit"/>
-					<div id="dropdown" class="dropdown-content">
-						<a href="#">link 1</a>
-						<a href="#">link 2</a>
-						<a href="#">link 3</a>
+		<script src="search.js" defer></script>
+		<nav id="nav">
+			<ul class="top-nav-ul">
+				<li class="top-nav-li"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></li>
+				<li class="top-nav-text-holder"><b class="top-nav-text">Sunny Road</b></li>
+				<li style="float:right" class="top-nav-li">
+					<div class="dropdownbtn">
+						<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="40" height="40" alt="shit"/>
+						<div id="dropdown" class="dropdown-content">
+							<a href="#">link 1</a>
+							<a href="#">link 2</a>
+							<a href="#">link 3</a>
+						</div>
 					</div>
-				</div>
+				</li>
 			</ul>
-			<input id="city-input" list="cities" type="text" placeholder="city">
-			<datalist id="cities">
-				<option id="closest-match" value=""></option>
-				<option id="closest-match" value=""></option>
-				<option id="closest-match" value=""></option>
-			</datalist>
-			<button id="confirm"><a href="city.html">Confirm</a></button>
-			<img id="nav-background" src="pictures/stormcloud 2.0.jpg" width=1200 height=300>
+			<div class="bot-nav">
+				<div class="search-bar">
+					<input id="city-input" type="text" placeholder="city">
+					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures\loop.png" onclick="javascript:alert('Hello World!')"></div>
+				</div>
+			</div>
 		</nav>
+		<div>
+			
+		</div>
 	</body>
 </html>
 

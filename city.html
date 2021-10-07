@@ -4,14 +4,28 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="city_style.css">
 	<title>dav</title>
 </head>
 	<body>
 		<script src="accuweather_API.js" defer></script>
+		<script src="dropdownMenu.js" defer></script>	
 		<nav>
-			<ul>
-				<li><a href="home.html">Logo</a></li>
-				<li><a>dropdown menu</a></li>
+			<ul class="top-nav-ul">
+				<li class="top-nav-header-li"> 
+					<div class="top-nav-div"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></div>
+					<div class="top-nav-text-holder"><b class="top-nav-text">Sunny Road</b></div>
+					<div style="float:right" class="top-nav-div">
+						<div class="dropdownbtn">
+							<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="40" height="40" alt="shit"/>
+							<div id="dropdown" class="dropdown-content">
+								<a href="#">link 1</a>
+								<a href="#">link 2</a>
+								<a href="#">link 3</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</ul>
 			<input id="city-input" list="cities" type="text" placeholder="city">
 			<datalist id="cities">

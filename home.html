@@ -5,13 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>StormClout</title>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<link rel="stylesheet" href="map.css">
 		<link rel="stylesheet" href="navigation.css">
 	</head>
-	<body onLoad="locater()">
+	<body onLoad="onSucces">
 		<script src="accuweather_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
 		<script src="search.js" defer></script>
-		<script src="locater_getter.js" defer></script>
+		<script src="google-map.js" defer></script>
 		<nav id="nav">
 			<ul class="top-nav-ul">
 				<li class="top-nav-li"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></li>
@@ -30,13 +32,15 @@
 			<div class="bot-nav">
 				<div class="search-bar">
 					<input id="city-input" type="text" placeholder="city">
-					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures\loop.png" onclick=""></div>
+					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures/loop.png" onclick=""></div>
 				</div>
 			</div>
 		</nav>
-		<div>
-			
-		</div>
+		<div id="map"></div>
+		<script async
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzz2EhmG9W8-QfXf-6rkUoVkR-zjRloeE&callback=onSucces"
+		></script>
+		<div></div>
 	</body>
 </html>
 

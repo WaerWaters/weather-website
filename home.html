@@ -13,26 +13,30 @@
 		<script src="accuweather_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
 		<script src="search.js" defer></script>
+		<script src="redirect.js" defer></script>
 		<script src="google-map.js" defer></script>
 		<nav id="nav">
 			<ul class="top-nav-ul">
-				<li class="top-nav-li"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></li>
-				<li class="top-nav-text-holder"><b class="top-nav-text">Sunny Road</b></li>
-				<li style="float:right" class="top-nav-li">
-					<div class="dropdownbtn">
-						<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="40" height="40" alt="shit"/>
-						<div id="dropdown" class="dropdown-content">
-							<a href="#">link 1</a>
-							<a href="#">link 2</a>
-							<a href="#">link 3</a>
+				<li class="top-nav-header-li"> 
+					<div class="top-nav-div"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></div>
+					<div class="top-nav-text-holder"><b class="top-nav-text">Sunny Road</b></div>
+					<div style="float:right" class="top-nav-div">
+						<div class="dropdownbtn">
+							<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="40" height="40" alt="shit"/>
+							<div id="dropdown" class="dropdown-content">
+								<a href="#">link 1</a>
+								<a href="#">link 2</a>
+								<a href="#">link 3</a>
+							</div>
 						</div>
 					</div>
-				</li>
+				</div>
+				
 			</ul>
 			<div class="bot-nav">
 				<div class="search-bar">
-					<input id="city-input" type="text" placeholder="city">
-					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures/loop.png" onclick=""></div>
+					<input id="city-input" type="text" placeholder="">
+					<div class="loop-holder"><input type="image" onclick="redirect()" id="submitBtn" src="pictures\loop.png" ></div>
 				</div>
 			</div>
 		</nav>

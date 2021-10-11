@@ -5,13 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>StormClout</title>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<link rel="stylesheet" href="map.css">
 		<link rel="stylesheet" href="navigation.css">
 	</head>
-	<body>
+	<body onLoad="onSucces">
 		<script src="accuweather_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
 		<script src="search.js" defer></script>
 		<script src="redirect.js" defer></script>
+		<script src="google-map.js" defer></script>
 		<nav id="nav">
 			<ul class="top-nav-ul">
 				<li class="top-nav-header-li"> 
@@ -37,8 +40,21 @@
 				</div>
 			</div>
 		</nav>
+		<ul>
+			<li><button id="precipitation" type="submit">precipitation</button></li>
+			<li><button id="temp" type="submit">temp</button></li>
+			<li><button id="wind" type="submit">wind</button></li>
+			<li><button id="pressure" type="submit">pressure</button></li>
+			<li><button id="clouds" type="submit">clouds</button></li>
+		</ul>
+		<div id="map"></div>
+		<script async
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzz2EhmG9W8-QfXf-6rkUoVkR-zjRloeE&callback=onSucces"
+		></script>
 		<div>
-			
+			<ul>
+				<li>viborg, 18</li>
+			</ul>
 		</div>
 	</body>
 </html>

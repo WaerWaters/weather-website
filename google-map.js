@@ -1,9 +1,14 @@
-
+let precipitationPressed = false;
+let windPressed = false;
+let tempPressed = false;
+let pressurePressed = false;
+let cloudsPressed = false;
 
 let onSucces = function locater(pos) {
     lat = pos.coords.latitude;
     lng = pos.coords.longitude;
     initMap(lat, lng);
+    //console.log(getCities());
 
 } 
 navigator.geolocation.getCurrentPosition(onSucces)
@@ -24,7 +29,7 @@ function initMap(latValue, lngValue) {
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 9,
         minZoom: 0,
-        name: 'mymaptype'
+        name: 'precipitation'
     });
 
     let temp = new google.maps.ImageMapType({
@@ -35,7 +40,7 @@ function initMap(latValue, lngValue) {
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 9,
         minZoom: 0,
-        name: 'mymaptype'
+        name: 'temp'
     });
 
     let clouds = new google.maps.ImageMapType({
@@ -46,7 +51,7 @@ function initMap(latValue, lngValue) {
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 9,
         minZoom: 0,
-        name: 'mymaptype'
+        name: 'clouds'
     });
 
     let pressure = new google.maps.ImageMapType({
@@ -57,7 +62,7 @@ function initMap(latValue, lngValue) {
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 9,
         minZoom: 0,
-        name: 'mymaptype'
+        name: 'pressure'
     });
 
     let wind = new google.maps.ImageMapType({
@@ -68,13 +73,63 @@ function initMap(latValue, lngValue) {
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 9,
         minZoom: 0,
-        name: 'mymaptype'
+        name: 'wind'
     });
 
-map.overlayMapTypes.insertAt(0, precipitation);
-map.overlayMapTypes.insertAt(1, temp);
-map.overlayMapTypes.insertAt(1, wind);
-map.overlayMapTypes.insertAt(1, pressure);
-map.overlayMapTypes.insertAt(1, clouds);
+    //map.overlayMapTypes.insertAt(2, wind);
+    //map.overlayMapTypes.insertAt(3, pressure);
+    //map.overlayMapTypes.insertAt(4, clouds);
+
+    document.getElementById("precipitation").onclick = function() {
+        if (precipitationPressed == false) {
+            map.overlayMapTypes.setAt(0, precipitation)
+            precipitationPressed = true
+        } else if (map.overlayMapTypes.Be[0].name == "precipitation") {
+            map.overlayMapTypes.removeAt(0)
+            precipitationPressed = false
+        } else if (map.overlayMapTypes.Be[0].name != "precipitation") {
+            
+        }
+    }
+    
+    document.getElementById("temp").onclick = function() {
+        if (map.overlayMapTypes.Be[0].name != temp ) {
+
+        }
+        if (tempPressed == false) { 
+            map.overlayMapTypes.setAt(0, temp)
+            tempPressed = true
+            console.log(map)
+        }
+    }
+
+    //map.overlayMapTypes.removeAt(0);
+
 }
+
+
+
+
+
+
+
+
+
+
+
+/*async function getCities() {
+    let raw = {
+        "country": "nigeria"
+    };
+
+    let requestOptions = {
+    method: 'POST',
+    body: raw,
+    redirect: 'follow'
+    };
+
+    const response = await fetch("https://countriesnow.space/api/v0.1/countries/cities", requestOptions)
+    return await response.json();
+}*/
+
 

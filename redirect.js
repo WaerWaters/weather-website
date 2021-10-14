@@ -1,4 +1,19 @@
 
+function inBetween() {
+    location.href = "city.html"
+}
+
+function storeCityFromCity() {
+    //variable to pass
+    let cityName = document.getElementById("city-input").value;
+    
+    //save to session
+    sessionStorage.setItem("cityName", cityName);
+
+    //redirect
+    location.href = "in-between.html"
+}
+
 function storeCity() {
     //variable to pass
     let cityName = document.getElementById("city-input").value;
@@ -18,7 +33,7 @@ function getCity() {
     //to delete
     //sessionStorage.removeItem(KEY)
     //to clear all
-    //sessionStorage.clear()
+    sessionStorage.clear()
 
     let weatherData = getWeatherData()
     weatherData.then(function(data) {
@@ -26,6 +41,7 @@ function getCity() {
         for (let day = 0; day <= 4; day++) {
             time = (day + 1) * 8;
             if (day == 0) {
+                document.querySelector("#day0").textContent = "Today"
                 if (data.list[day].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -48,7 +64,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[day].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[day].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[day].main.temp)}°`;
                 if (data.list[day].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[day].rain["3h"]}mm precipitation`
                 } else {
@@ -75,6 +91,7 @@ function getCity() {
                 }
             }
             if (day == 1) {
+                document.querySelector("#day1").textContent = "Tomorrow"
                 if (data.list[time].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -97,7 +114,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time].main.temp)}°`;
                 if (data.list[time].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time].rain["3h"]}mm precipitation`
                 } else {
@@ -124,6 +141,10 @@ function getCity() {
                 }
             }
             if (day == 2) {
+                let date = new Date();
+                let day2 = new Date();
+                day2.setDate(date.getDate() + 2);
+                document.querySelector("#day2").textContent = new Intl.DateTimeFormat('en-US', {weekday: "long"}).format(day2);
                 if (data.list[time].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -146,7 +167,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time].main.temp)}°`;
                 if (data.list[time].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time].rain["3h"]}mm precipitation`
                 } else {
@@ -173,6 +194,10 @@ function getCity() {
                 }
             }
             if (day == 3) {
+                let date = new Date();
+                let day2 = new Date();
+                day2.setDate(date.getDate() + 3);
+                document.querySelector("#day3").textContent = new Intl.DateTimeFormat('en-US', {weekday: "long"}).format(day2);
                 if (data.list[time].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -195,7 +220,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time].main.temp)}°`;
                 if (data.list[time].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time].rain["3h"]}mm precipitation`
                 } else {
@@ -222,6 +247,10 @@ function getCity() {
                 }
             }
             if (day == 4) {
+                let date = new Date();
+                let day2 = new Date();
+                day2.setDate(date.getDate() + 4);
+                document.querySelector("#day4").textContent = new Intl.DateTimeFormat('en-US', {weekday: "long"}).format(day2);
                 if (data.list[time-1].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -244,7 +273,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time-1].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time-1].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time-1].main.temp)}°`;
                 if (data.list[time-1].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time-1].rain["3h"]}mm precipitation`
                 } else {
@@ -272,6 +301,10 @@ function getCity() {
             }
         }
     }) 
+}
+
+function kelvinToCelcius(data) {
+	return (data - 273.15).toFixed(2);
 }
 
 

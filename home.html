@@ -34,28 +34,31 @@
 				
 			</ul>
 			<div class="bot-nav">
-				<div class="search-bar">
-					<input id="city-input" type="text" placeholder="">
-					<div class="loop-holder"><input type="image" onclick="redirect()" id="submitBtn" src="pictures\loop.png" ></div>
+				<div class="top-bot-nav">
+					<div class="search-bar">
+					
+						<input id="city-input" type="text" placeholder="">
+						<div class="loop-holder"><input type="image" onclick="redirect()" id="submitBtn" src="pictures\loop.png" ></div>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-item">
+						<ul>
+							<li><button class="button" id="precipitation" type="submit">Precipitation</button></li>
+							<li><button class="button" id="temp" type="submit">Temp</button></li>
+							<li><button class="button" id="wind" type="submit">Wind</button></li>
+							<li><button class="button" id="pressure" type="submit">Pressure</button></li>
+							<li><button class="button" id="clouds" type="submit">Clouds</button></li>
+						</ul>
+					</div>
+					<div class="grid-item">
+						<div id="map"></div>
+						<script async
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzz2EhmG9W8-QfXf-6rkUoVkR-zjRloeE&callback=onSucces" ></script>
+					</div>
 				</div>
 			</div>
-		</nav>
-		<ul>
-			<li><button id="precipitation" type="submit">precipitation</button></li>
-			<li><button id="temp" type="submit">temp</button></li>
-			<li><button id="wind" type="submit">wind</button></li>
-			<li><button id="pressure" type="submit">pressure</button></li>
-			<li><button id="clouds" type="submit">clouds</button></li>
-		</ul>
-		<div id="map"></div>
-		<script async
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzz2EhmG9W8-QfXf-6rkUoVkR-zjRloeE&callback=onSucces"
-		></script>
-		<div>
-			<ul>
-				<li>viborg, 18</li>
-			</ul>
-		</div>
+		</nav>		
 	</body>
 </html>
 

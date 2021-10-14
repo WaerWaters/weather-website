@@ -1,4 +1,19 @@
 
+function inBetween() {
+    location.href = "city.html"
+}
+
+function storeCityFromCity() {
+    //variable to pass
+    let cityName = document.getElementById("city-input").value;
+    
+    //save to session
+    sessionStorage.setItem("cityName", cityName);
+
+    //redirect
+    location.href = "in-between.html"
+}
+
 function storeCity() {
     //variable to pass
     let cityName = document.getElementById("city-input").value;
@@ -18,7 +33,7 @@ function getCity() {
     //to delete
     //sessionStorage.removeItem(KEY)
     //to clear all
-    //sessionStorage.clear()
+    sessionStorage.clear()
 
     let weatherData = getWeatherData()
     weatherData.then(function(data) {

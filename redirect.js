@@ -41,6 +41,7 @@ function getCity() {
         for (let day = 0; day <= 4; day++) {
             time = (day + 1) * 8;
             if (day == 0) {
+                document.querySelector("#day0").textContent = "Today"
                 if (data.list[day].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -90,6 +91,7 @@ function getCity() {
                 }
             }
             if (day == 1) {
+                document.querySelector("#day1").textContent = "Tomorrow"
                 if (data.list[time].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -139,6 +141,10 @@ function getCity() {
                 }
             }
             if (day == 2) {
+                let date = new Date();
+                let day2 = new Date();
+                day2.setDate(date.getDate() + 2);
+                document.querySelector("#day2").textContent = new Intl.DateTimeFormat('en-US', {weekday: "long"}).format(day2);
                 if (data.list[time].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -188,6 +194,10 @@ function getCity() {
                 }
             }
             if (day == 3) {
+                let date = new Date();
+                let day2 = new Date();
+                day2.setDate(date.getDate() + 3);
+                document.querySelector("#day3").textContent = new Intl.DateTimeFormat('en-US', {weekday: "long"}).format(day2);
                 if (data.list[time].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 
@@ -237,6 +247,10 @@ function getCity() {
                 }
             }
             if (day == 4) {
+                let date = new Date();
+                let day2 = new Date();
+                day2.setDate(date.getDate() + 4);
+                document.querySelector("#day4").textContent = new Intl.DateTimeFormat('en-US', {weekday: "long"}).format(day2);
                 if (data.list[time-1].weather[0].main == "Rain") {
                     let img = document.createElement("img"); 
                     img.src = "pictures/regn.png"; 

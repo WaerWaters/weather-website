@@ -201,8 +201,9 @@ body {
 }
 
 .weather-text {
-
+    
     color: #ddd;
+    align-self: center;
 
 }
 

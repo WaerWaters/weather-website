@@ -87,8 +87,18 @@ function initMap(latValue, lngValue) {
         } else if (map.overlayMapTypes.Be[0].name == "precipitation") {
             map.overlayMapTypes.removeAt(0)
             precipitationPressed = false
-        } else if (map.overlayMapTypes.Be[0].name != "precipitation") {
-            
+        } else if (map.overlayMapTypes.Be[1].name == "precipitation") {
+            map.overlayMapTypes.removeAt(1)
+            precipitationPressed = false
+        } else if (map.overlayMapTypes.Be[2].name == "precipitation") {
+            map.overlayMapTypes.removeAt(2)
+            precipitationPressed = false
+        } else if (map.overlayMapTypes.Be[3].name == "precipitation") {
+            map.overlayMapTypes.removeAt(3)
+            precipitationPressed = false
+        } else if (map.overlayMapTypes.Be[4].name == "precipitation") {
+            map.overlayMapTypes.removeAt(4)
+            precipitationPressed = false
         }
     }
     

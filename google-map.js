@@ -84,37 +84,86 @@ function initMap(latValue, lngValue) {
         if (precipitationPressed == false) {
             map.overlayMapTypes.setAt(0, precipitation)
             precipitationPressed = true
+            console.log(map.overlayMapTypes.Be)
         } else if (map.overlayMapTypes.Be[0].name == "precipitation") {
             map.overlayMapTypes.removeAt(0)
-            precipitationPressed = false
-        } else if (map.overlayMapTypes.Be[1].name == "precipitation") {
-            map.overlayMapTypes.removeAt(1)
-            precipitationPressed = false
-        } else if (map.overlayMapTypes.Be[2].name == "precipitation") {
-            map.overlayMapTypes.removeAt(2)
-            precipitationPressed = false
-        } else if (map.overlayMapTypes.Be[3].name == "precipitation") {
-            map.overlayMapTypes.removeAt(3)
-            precipitationPressed = false
-        } else if (map.overlayMapTypes.Be[4].name == "precipitation") {
-            map.overlayMapTypes.removeAt(4)
             precipitationPressed = false
         }
     }
     
     document.getElementById("temp").onclick = function() {
-        if (map.overlayMapTypes.Be[0].name != temp ) {
-
-        }
-        if (tempPressed == false) { 
-            map.overlayMapTypes.setAt(0, temp)
+        if (tempPressed == false) {
+            map.overlayMapTypes.setAt(1, temp)
             tempPressed = true
-            console.log(map)
-        }
+            console.log(map.overlayMapTypes.Be)
+        } else if (map.overlayMapTypes.Be.length >= 2) {
+            map.overlayMapTypes.removeAt(1)
+            tempPressed = false
+        } else if (map.overlayMapTypes.Be[0].name == "temp") {
+            map.overlayMapTypes.removeAt(0)
+            tempPressed = false
+        } 
     }
 
-    //map.overlayMapTypes.removeAt(0);
+    document.getElementById("wind").onclick = function() {
+        if (windPressed == false) {
+            map.overlayMapTypes.setAt(2, wind)
+            windPressed = true
+            console.log(map.overlayMapTypes.Be)
+        } else if (map.overlayMapTypes.Be.length >= 3) {
+            map.overlayMapTypes.removeAt(2)
+            windPressed = false
+        } else if (map.overlayMapTypes.Be.length == 2) {
+            map.overlayMapTypes.removeAt(1)
+            windPressed = false
+        } else if (map.overlayMapTypes.Be[0].name == "wind") {
+            map.overlayMapTypes.removeAt(0)
+            windPressed = false
+        } 
+    }
 
+    document.getElementById("pressure").onclick = function() {
+        if (pressurePressed == false) {
+            map.overlayMapTypes.setAt(3, pressure)
+            pressurePressed = true
+            console.log(map.overlayMapTypes.Be)
+        } else if (map.overlayMapTypes.Be.length >= 4) {
+            map.overlayMapTypes.removeAt(3)
+            pressurePressed = false
+        } else if (map.overlayMapTypes.Be.length == 3) {
+            map.overlayMapTypes.removeAt(2)
+            pressurePressed = false
+        } else if (map.overlayMapTypes.Be.length == 2) {
+            map.overlayMapTypes.removeAt(1)
+            pressurePressed = false
+        } else if (map.overlayMapTypes.Be[0].name == "pressure") {
+            map.overlayMapTypes.removeAt(0)
+            pressurePressed = false
+        } 
+    }
+
+    document.getElementById("clouds").onclick = function() {
+        if (cloudsPressed == false) {
+            map.overlayMapTypes.setAt(3, clouds)
+            cloudsPressed = true
+            console.log(map.overlayMapTypes.Be)
+        } else if (map.overlayMapTypes.Be.length >= 5) {
+            map.overlayMapTypes.removeAt(4)
+            cloudsPressed = false
+        } else if (map.overlayMapTypes.Be.length == 4) {
+            map.overlayMapTypes.removeAt(3)
+            cloudsPressed = false
+        } else if (map.overlayMapTypes.Be.length == 3) {
+            map.overlayMapTypes.removeAt(2)
+            cloudsPressed = false
+        } else if (map.overlayMapTypes.Be.length == 2) {
+            map.overlayMapTypes.removeAt(1)
+            cloudsPressed = false
+        } else if (map.overlayMapTypes.Be[0].name == "clouds") {
+            map.overlayMapTypes.removeAt(0)
+            cloudsPressed = false
+        } 
+    }
 }
 
 

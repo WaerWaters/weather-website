@@ -172,18 +172,15 @@ ul {
 
 .button {
     position: relative;
-    background-color: #4B4844;
     border: none;
     font-size: 28px;
     color: #FFFFFF;
     padding: 20px;
     width: 100%;
     text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
+    background-color: #4B4844;
+    transition: 0.3s;
+
 
     margin: 2px;
     border-radius: 15px;
@@ -191,28 +188,17 @@ ul {
     -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
+}
 
+button:hover {
+    background-color: #00aacc;
+    color: #ffffff;
   }
-  
-  .button:after {
-    content: "";
-    background: rgba(255,230,109,1);
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px!important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-  }
-  
-  .button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-  }
+
+
+
+
+
 
 
 

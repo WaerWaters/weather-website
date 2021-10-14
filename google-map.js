@@ -84,10 +84,12 @@ function initMap(latValue, lngValue) {
         if (precipitationPressed == false) {
             map.overlayMapTypes.setAt(0, precipitation)
             precipitationPressed = true
+            document.getElementById('precipitation').style.backgroundColor = "rgba(255,230,109,1)"
             console.log(map.overlayMapTypes.Be)
         } else if (map.overlayMapTypes.Be[0].name == "precipitation") {
             map.overlayMapTypes.removeAt(0)
             precipitationPressed = false
+            document.getElementById('precipitation').style.backgroundColor = "#4B4844"
         }
     }
     
@@ -95,13 +97,16 @@ function initMap(latValue, lngValue) {
         if (tempPressed == false) {
             map.overlayMapTypes.setAt(1, temp)
             tempPressed = true
+            document.getElementById('temp').style.backgroundColor = "rgba(255,230,109,1)"
             console.log(map.overlayMapTypes.Be)
         } else if (map.overlayMapTypes.Be.length >= 2) {
             map.overlayMapTypes.removeAt(1)
             tempPressed = false
+            document.getElementById('temp').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be[0].name == "temp") {
             map.overlayMapTypes.removeAt(0)
             tempPressed = false
+            document.getElementById('temp').style.backgroundColor = "#4B4844"
         } 
     }
 
@@ -109,16 +114,20 @@ function initMap(latValue, lngValue) {
         if (windPressed == false) {
             map.overlayMapTypes.setAt(2, wind)
             windPressed = true
+            document.getElementById('wind').style.backgroundColor = "rgba(255,230,109,1)"
             console.log(map.overlayMapTypes.Be)
         } else if (map.overlayMapTypes.Be.length >= 3) {
             map.overlayMapTypes.removeAt(2)
             windPressed = false
+            document.getElementById('wind').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be.length == 2) {
             map.overlayMapTypes.removeAt(1)
             windPressed = false
+            document.getElementById('wind').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be[0].name == "wind") {
             map.overlayMapTypes.removeAt(0)
             windPressed = false
+            document.getElementById('wind').style.backgroundColor = "#4B4844"
         } 
     }
 
@@ -126,19 +135,24 @@ function initMap(latValue, lngValue) {
         if (pressurePressed == false) {
             map.overlayMapTypes.setAt(3, pressure)
             pressurePressed = true
+            document.getElementById('pressure').style.backgroundColor = "rgba(255,230,109,1)"
             console.log(map.overlayMapTypes.Be)
         } else if (map.overlayMapTypes.Be.length >= 4) {
             map.overlayMapTypes.removeAt(3)
             pressurePressed = false
+            document.getElementById('pressure').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be.length == 3) {
             map.overlayMapTypes.removeAt(2)
             pressurePressed = false
+            document.getElementById('pressure').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be.length == 2) {
             map.overlayMapTypes.removeAt(1)
             pressurePressed = false
+            document.getElementById('pressure').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be[0].name == "pressure") {
             map.overlayMapTypes.removeAt(0)
             pressurePressed = false
+            document.getElementById('pressure').style.backgroundColor = "#4B4844"
         } 
     }
 
@@ -146,25 +160,35 @@ function initMap(latValue, lngValue) {
         if (cloudsPressed == false) {
             map.overlayMapTypes.setAt(3, clouds)
             cloudsPressed = true
+            document.getElementById('clouds').style.backgroundColor = "rgba(255,230,109,1)"
             console.log(map.overlayMapTypes.Be)
         } else if (map.overlayMapTypes.Be.length >= 5) {
             map.overlayMapTypes.removeAt(4)
             cloudsPressed = false
+            document.getElementById('clouds').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be.length == 4) {
             map.overlayMapTypes.removeAt(3)
             cloudsPressed = false
+            document.getElementById('clouds').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be.length == 3) {
             map.overlayMapTypes.removeAt(2)
             cloudsPressed = false
+            document.getElementById('clouds').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be.length == 2) {
             map.overlayMapTypes.removeAt(1)
             cloudsPressed = false
+            document.getElementById('clouds').style.backgroundColor = "#4B4844"
         } else if (map.overlayMapTypes.Be[0].name == "clouds") {
             map.overlayMapTypes.removeAt(0)
             cloudsPressed = false
+            document.getElementById('clouds').style.backgroundColor = "#4B4844"
         } 
     }
+
+
+
 }
+
 
 
 

@@ -4,24 +4,28 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>StormClout</title>
+		<title>Sunny Road</title>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<link rel="stylesheet" href="map.css">
 		<link rel="stylesheet" href="navigation.css">
 	</head>
-	<body>
-		<script src="accuweather_API.js" defer></script>
+	<body onLoad="onSucces">
+		<script src="open_API.js" defer></script>
 		<script src="dropdownMenu.js" defer></script>	
 		<script src="search.js" defer></script>
+		<script src="redirect.js" defer></script>
+		<script src="google-map.js" defer></script>
 		<nav id="nav">
 			<ul class="top-nav-ul">
 				<li class="top-nav-header-li"> 
-					<div class="top-nav-div"><input class="logo" type="image" src="pictures/sUNNYROAD.png" href="home.html" alt="😂"></div>
-					<div class="top-nav-text-holder"><b class="top-nav-text">Sunny Road</b></div>
+					<div class="top-nav-div"><input class="logo" type="image" src="pictures/sunnyroad logo.png" href="home.html"></div>
+					<div class="top-nav-text-holder"><b class="top-nav-text"></b></div>
 					<div style="float:right" class="top-nav-div">
 						<div class="dropdownbtn">
 							<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="40" height="40" alt="shit"/>
 							<div id="dropdown" class="dropdown-content">
-								<a href="#">link 1</a>
-								<a href="#">link 2</a>
+								<a onclick="location.href='home.html';">Home</a>
+								<a onclick="location.href='city.html';">City</a>
 								<a href="#">link 3</a>
 							</div>
 						</div>
@@ -30,15 +34,30 @@
 				
 			</ul>
 			<div class="bot-nav">
-				<div class="search-bar">
-					<input id="city-input" type="text" placeholder="city">
-					<div class="loop-holder"><input type="image" id="submitBtn" src="pictures\loop.png" onclick="javascript:alert('Hello World!')"></div>
+				<div class="top-bot-nav">
+					<div class="search-bar">
+						<input id="city-input" type="text" placeholder="">
+						<div class="loop-holder"><input type="image" onclick="storeCity()" id="submitBtn" src="pictures\loop.png" ></div>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-item">
+						<ul>
+							<li><button class="button" id="precipitation" type="submit">Precipitation</button></li>
+							<li><button class="button" id="temp" type="submit">Temp</button></li>
+							<li><button class="button" id="wind" type="submit">Wind</button></li>
+							<li><button class="button" id="pressure" type="submit">Pressure</button></li>
+							<li><button class="button" id="clouds" type="submit">Clouds</button></li>
+						</ul>
+					</div>
+					<div class="grid-item">
+						<div id="map"></div>
+						<script async
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzz2EhmG9W8-QfXf-6rkUoVkR-zjRloeE&callback=onSucces" ></script>
+					</div>
 				</div>
 			</div>
-		</nav>
-		<div>
-			
-		</div>
+		</nav>		
 	</body>
 </html>
 

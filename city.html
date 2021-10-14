@@ -4,35 +4,94 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>dav</title>
+	<link rel="stylesheet" href="city_style.css">
+	<title>City</title>
 </head>
-	<body>
-		<script src="accuweather_API.js" defer></script>
-		<nav>
-			<ul>
-				<li><a href="home.html">Logo</a></li>
-				<li><a>dropdown menu</a></li>
+	<body onload="getCity()">
+		<script src="open_API.js" defer></script>
+		<script src="dropdownMenu.js" defer></script>	
+		<script src="redirect.js" defer></script>	
+		<nav id="nav">
+			<ul class="top-nav-ul">
+				<li class="top-nav-header-li"> 
+					<div class="top-nav-div"><input class="logo" type="image" src="pictures/sunnyroad logo.png" onclick="location.href='home.html';"></div>
+					<div class="top-nav-text-holder"><b class="top-nav-text"></b></div>
+					<div style="float:right" class="top-nav-div">
+						<div class="dropdownbtn">
+							<input type="image" onclick="dropFunction()" class="dropbtn" src="pictures/dropdown menu symbol.png" width="40" height="40" alt="shit"/>
+							<div id="dropdown" class="dropdown-content">
+								<a onclick="location.href='home.html';">Home</a>
+								<a onclick="location.href='city.html';">City</a>
+								<a href="#">About</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</ul>
-			<input id="city-input" list="cities" type="text" placeholder="city">
-			<datalist id="cities">
-				<option id="closest-match" value=""></option>
-				<option id="closest-match" value=""></option>
-				<option id="closest-match" value=""></option>
-			</datalist>
-			<button id="confirm">Confirm</button>
-			<img id="nav-background" src="pictures/stormcloud 2.0.jpg" width=1200 height=300>
+			<div class="bot-nav">
+				<div class="search-bar">
+					<input id="city-input" type="text" placeholder="">
+					<div class="loop-holder"><input type="image" onclick="getCity()" id="submitBtn" src="pictures\loop.png" ></div>
+				</div>
+				<div id="weather-data">
+					<h1 class="city-name" id="city"></h1>
+					<div class="flex-container">
+						<div class="flex-item">
+							<h2 class="weather-text" id="0">Mandag</h2>
+							<h2 class="weather-text" id="weather0"></h2>
+							<h2 class="weather-text" id="description0"></h2>
+							<h2 class="weather-text" id="temp0"></h2>
+							<h2 class="weather-text" id="rain0"> </h2>
+							<h2 class="weather-text" id="pressure0"></h2>
+							<h2 class="weather-text" id="wind0"></h2>
+							<h2 class="weather-text" id="wind-deg0"></h2>
+						</div>
+						<div class="flex-item">
+							<h2 class="weather-text" id="1">Tirsdag</h2>
+							<h2 class="weather-text" id="weather1"></h2>
+							<h2 class="weather-text" id="description1"></h2>
+							<h2 class="weather-text" id="temp1"></h2>
+							<h2 class="weather-text" id="rain1"> </h2>
+							<h2 class="weather-text" id="pressure1"></h2>
+							<h2 class="weather-text" id="wind1"></h2>
+							<h2 class="weather-text" id="wind-deg1"></h2>
+						</div>
+						<div class="flex-item">
+							<h2 class="weather-text" id="2">Onsdag</h2>
+							<h2 class="weather-text" id="weather2"></h2>
+							<h2 class="weather-text" id="description2"></h2>
+							<h2 class="weather-text" id="temp2"></h2>
+							<h2 class="weather-text" id="rain2"> </h2>
+							<h2 class="weather-text" id="pressure2"></h2>
+							<h2 class="weather-text" id="wind2"></h2>
+							<h2 class="weather-text" id="wind-deg2"></h2>
+						</div>
+						<div class="flex-item">
+							<h2 class="weather-text" id="3">Torsdag</h2>
+							<h2 class="weather-text" id="weather3"></h2>
+							<h2 class="weather-text" id="description3"></h2>
+							<h2 class="weather-text" id="temp3"></h2>
+							<h2 class="weather-text" id="rain3"> </h2>
+							<h2 class="weather-text" id="pressure3"></h2>
+							<h2 class="weather-text" id="wind3"></h2>
+							<h2 class="weather-text" id="wind-deg3"></h2>
+						</div>
+						<div class="flex-item">
+							<h2 class="weather-text" id="4">Fredag</h2>
+							<h2 class="weather-text" id="weather4"></h2>
+							<h2 class="weather-text" id="description4"></h2>
+							<h2 class="weather-text" id="temp4"></h2>
+							<h2 class="weather-text" id="rain4"> </h2>
+							<h2 class="weather-text" id="pressure4"></h2>
+							<h2 class="weather-text" id="wind4"></h2>
+							<h2 class="weather-text" id="wind-deg4"></h2>
+						</div>
+					</div>
+				</div>
+			</div>
 		</nav>
 		
 		<br>
-		<div id="weather-data">
-			<h1 id="city"></h1>
-			<h2 id="headline"></h2>
-			<h2 id="day"></h2>
-			<h3 id="weather"></h3>
-			<ul>
-				<h3 id="temperatureHigh"></h3>
-				<h3 id="temperatureLow"></h3>
-			</ul>
-		</div>
+		
 	</body>
 </html>

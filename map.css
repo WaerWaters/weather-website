@@ -1,0 +1,16 @@
+#map {
+    height: 500px;
+    width: auto;
+    margin: 20px;
+    margin-top: 0px;
+    
+    border: solid #4B4844;
+    border-radius: 15px;
+
+    background-color: #4B4844;
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+

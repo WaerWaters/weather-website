@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     font-family: Verdana;
+    background-color: rgb(145,229,246);
 }
 
 .top-nav-ul {
@@ -9,7 +10,7 @@ body {
 
     background-color: #72756C;
     border-bottom: 2px solid #4B4844;
-
+    
 
     
 }
@@ -37,7 +38,8 @@ body {
 
 .logo {
     padding: 5px;
-    border-radius: 100%;
+    width: auto;
+    height: 45px;
 }
 
 .top-nav-text-holder {
@@ -95,11 +97,11 @@ body {
     display:block;
 }
 
-.bot-nav {
-    height: 300px;
 
-    background: rgb(145,229,246);
-    background: linear-gradient(0deg, rgba(145,229,246,1) 0%, rgba(255,230,109,1) 100%);
+
+.top-bot-nav {
+
+    height: 100px;
 
     display: grid;
     place-items: center;
@@ -107,11 +109,12 @@ body {
 }
 
 .search-bar {
-    width: 35%;
-    height: 15%;
+    margin: auto;
 
     border: solid #4B4844;
-    border-radius: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 
     background-color:#72756C;
     
@@ -119,14 +122,18 @@ body {
     justify-content: center;
     position: relative;
     align-items: center; 
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
     
 }
 
 #city-input {
 
-    width: 50%;
+    width: 90%;
 
-    font-size: 30px;
+    font-size: 4em;
     
     outline: none;
     border: none;
@@ -145,13 +152,59 @@ body {
 
 .loop-holder {
 
-    width: 20px;
-    height: 20px;
+    width: auto;
+    height: auto;
 
     display: grid;
     place-items: center;
 }
 
+.city-name {
+    margin: 20px;
+    padding: 5px;
+    width: min-content;
+    border: solid #4B4844;
+    background-color: #72756C;
+    border-radius: 15px;
 
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+
+
+}
+
+.flex-container {
+
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+
+}
+
+.flex-item {
+    width: 300px;
+    border: solid #4B4844;
+    border-radius: 15px;
+
+    background-color: #72756C;
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;    
+    align-items: baseline;
+
+}
+
+.weather-text {
+    
+    color: #ddd;
+    align-self: center;
+
+}
 
 

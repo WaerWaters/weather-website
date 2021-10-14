@@ -1,6 +1,9 @@
+
+
 body {
     margin: 0px;
     font-family: Verdana;
+    background-color: rgb(145,229,246);
 }
 
 .top-nav-ul {
@@ -37,7 +40,8 @@ body {
 
 .logo {
     padding: 5px;
-    border-radius: 100%;
+    width: auto;
+    height: 45px;
 }
 
 .top-nav-text-holder {
@@ -95,15 +99,7 @@ body {
     display:block;
 }
 
-.bot-nav {
-    height: 700px;
 
-    background: rgb(145,229,246);
-    background: linear-gradient(0deg, rgba(145,229,246,1) 0%, rgba(255,230,109,1) 100%);
-
-    
-
-}
 
 .top-bot-nav {
 

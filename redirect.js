@@ -26,13 +26,33 @@ function getCity() {
         for (let day = 0; day <= 4; day++) {
             time = (day + 1) * 8;
             if (day == 0) {
-                document.querySelector("#weather" + day.toString()).textContent = `${data.list[day].weather[0].main}`;
+                if (data.list[day].weather[0].main == "Rain") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[day].weather[0].main == "Clouds") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/clouds.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[day].weather[0].main == "Drizzle") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[day].weather[0].main == "Clear") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/sol.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[day].weather[0].description}`
                 document.querySelector("#temp" + day.toString()).textContent = `${data.list[day].main.temp}°`;
                 if (data.list[day].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[day].rain["3h"]}mm precipitation`
                 } else {
-                    return
+                    
                 }
                 document.querySelector("#pressure" + day.toString()).textContent = `${data.list[day].main.pressure}N/m^2`
                 document.querySelector("#wind" + day.toString()).textContent = `${data.list[day].wind.speed}m/s`;
@@ -55,7 +75,27 @@ function getCity() {
                 }
             }
             if (day == 1) {
-                document.querySelector("#weather" + day.toString()).textContent = `${data.list[time].weather[0].main}`;
+                if (data.list[time].weather[0].main == "Rain") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Clouds") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/clouds.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Drizzle") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Clear") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/sol.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
                 document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
                 if (data.list[time].weather[0].main == "Rain") {
@@ -84,7 +124,27 @@ function getCity() {
                 }
             }
             if (day == 2) {
-                document.querySelector("#weather" + day.toString()).textContent = `${data.list[time].weather[0].main}`;
+                if (data.list[time].weather[0].main == "Rain") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Clouds") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/clouds.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Drizzle") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Clear") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/sol.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
                 document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
                 if (data.list[time].weather[0].main == "Rain") {
@@ -113,7 +173,27 @@ function getCity() {
                 }
             }
             if (day == 3) {
-                document.querySelector("#weather" + day.toString()).textContent = `${data.list[time].weather[0].main}`;
+                if (data.list[time].weather[0].main == "Rain") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Clouds") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/clouds.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Drizzle") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time].weather[0].main == "Clear") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/sol.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
                 document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
                 if (data.list[time].weather[0].main == "Rain") {
@@ -142,7 +222,27 @@ function getCity() {
                 }
             }
             if (day == 4) {
-                document.querySelector("#weather" + day.toString()).textContent = `${data.list[time-1].weather[0].main}`;
+                if (data.list[time-1].weather[0].main == "Rain") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time-1].weather[0].main == "Clouds") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/clouds.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time-1].weather[0].main == "Drizzle") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/regn.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                } else if (data.list[time-1].weather[0].main == "Clear") {
+                    let img = document.createElement("img"); 
+                    img.src = "pictures/sol.png"; 
+                    let src = document.getElementById("weather" + day.toString()); 
+                    src.appendChild(img); 
+                }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time-1].weather[0].description}`
                 document.querySelector("#temp" + day.toString()).textContent = `${data.list[time-1].main.temp}°`;
                 if (data.list[time-1].weather[0].main == "Rain") {
@@ -171,16 +271,7 @@ function getCity() {
                 }
             }
         }
-        
-        document.querySelector("#temp0").textContent = `${data.list[0].main.temp}°`
-        document.querySelector("#wind0").textContent = `${data.list[0].wind.speed}m/s`;
-        if (data.list[0].weather[0].main == "Rain") {
-            document.querySelector("#rain0").textContent = `${data.list[0].rain["3h"]}mm nedbør`
-        } else {
-            return
-        }
-    })
-    
+    }) 
 }
 
 

@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     font-family: Verdana;
+    background-color: rgb(145,229,246);
 }
 
 .top-nav-ul {
@@ -96,16 +97,7 @@ body {
     display:block;
 }
 
-.bot-nav {
-    height: 700px;
-    margin: none;
 
-    background: rgb(145,229,246);
-    background: linear-gradient(0deg, rgba(145,229,246,1) 0%, rgba(255,230,109,1) 100%);
-
-    
-
-}
 
 .top-bot-nav {
 
@@ -191,7 +183,7 @@ body {
 }
 
 .flex-item {
-    width: 250px;
+    width: 300px;
     border: solid #4B4844;
     border-radius: 15px;
 
@@ -200,7 +192,18 @@ body {
     -webkit-box-shadow: 0 10px 6px -6px #777;
      -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
-    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;    
+    align-items: baseline;
 
 }
+
+.weather-text {
+
+    color: #ddd;
+
+}
+
 

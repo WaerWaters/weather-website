@@ -1,6 +1,9 @@
+
+
 body {
     margin: 0px;
     font-family: Verdana;
+    background-color: rgb(145,229,246);
 }
 
 .top-nav-ul {
@@ -96,14 +99,7 @@ body {
     display:block;
 }
 
-.bot-nav {
-    height: 700px;
 
-    background: rgb(145,229,246);
-
-    
-
-}
 
 .top-bot-nav {
 

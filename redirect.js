@@ -55,7 +55,7 @@ function getCity() {
                     
                 }
                 document.querySelector("#pressure" + day.toString()).textContent = `${data.list[day].main.pressure}N/m^2`
-                document.querySelector("#wind" + day.toString()).textContent = `${data.list[day].wind.speed}m/s`;
+                document.querySelector("#wind" + day.toString()).textContent = `wind ${data.list[day].wind.speed}m/s`;
                 if (data.list[day].wind.deg < 22.5 || data.list[day].wind.deg > 337.5) {
                     document.querySelector("#wind-deg" + day.toString()).textContent = `N`;
                 } else if (data.list[day].wind.deg < 22.5 * 2 || data.list[day].wind.deg > 22.5) {
@@ -104,7 +104,7 @@ function getCity() {
                     
                 }
                 document.querySelector("#pressure" + day.toString()).textContent = `${data.list[time].main.pressure}N/m^2`
-                document.querySelector("#wind" + day.toString()).textContent = `${data.list[time].wind.speed}m/s`;
+                document.querySelector("#wind" + day.toString()).textContent = `wind ${data.list[time].wind.speed}m/s`;
                 if (data.list[time].wind.deg < 22.5 || data.list[time].wind.deg > 337.5) {
                     document.querySelector("#wind-deg" + day.toString()).textContent = `N`;
                 } else if (data.list[time].wind.deg < 22.5 * 2 || data.list[time].wind.deg > 22.5) {
@@ -153,7 +153,7 @@ function getCity() {
                     
                 }
                 document.querySelector("#pressure" + day.toString()).textContent = `${data.list[time].main.pressure}N/m^2`
-                document.querySelector("#wind" + day.toString()).textContent = `${data.list[time].wind.speed}m/s`;
+                document.querySelector("#wind" + day.toString()).textContent = `wind ${data.list[time].wind.speed}m/s`;
                 if (data.list[time].wind.deg < 22.5 || data.list[time].wind.deg > 337.5) {
                     document.querySelector("#wind-deg" + day.toString()).textContent = `N`;
                 } else if (data.list[time].wind.deg < 22.5 * 2 || data.list[time].wind.deg > 22.5) {
@@ -202,7 +202,7 @@ function getCity() {
                     
                 }
                 document.querySelector("#pressure" + day.toString()).textContent = `${data.list[time].main.pressure}N/m^2`
-                document.querySelector("#wind" + day.toString()).textContent = `${data.list[time].wind.speed}m/s`;
+                document.querySelector("#wind" + day.toString()).textContent = `wind ${data.list[time].wind.speed}m/s`;
                 if (data.list[time].wind.deg < 22.5 || data.list[time].wind.deg > 337.5) {
                     document.querySelector("#wind-deg" + day.toString()).textContent = `N`;
                 } else if (data.list[time].wind.deg < 22.5 * 2 || data.list[time].wind.deg > 22.5) {
@@ -251,7 +251,7 @@ function getCity() {
                     
                 }
                 document.querySelector("#pressure" + day.toString()).textContent = `${data.list[time-1].main.pressure}N/m^2`
-                document.querySelector("#wind" + day.toString()).textContent = `${data.list[time-1].wind.speed}m/s`;
+                document.querySelector("#wind" + day.toString()).textContent = `wind ${data.list[time-1].wind.speed}m/s`;
                 if (data.list[time-1].wind.deg < 22.5 || data.list[time-1].wind.deg > 337.5) {
                     document.querySelector("#wind-deg" + day.toString()).textContent = `N`;
                 } else if (data.list[time-1].wind.deg < 22.5 * 2 || data.list[time-1].wind.deg > 22.5) {

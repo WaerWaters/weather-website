@@ -1,6 +1,9 @@
+
+
 body {
     margin: 0px;
     font-family: Verdana;
+    background-color: rgb(145,229,246);
 }
 
 .top-nav-ul {
@@ -9,7 +12,7 @@ body {
 
     background-color: #72756C;
     border-bottom: 2px solid #4B4844;
-
+    
 
     
 }
@@ -37,7 +40,8 @@ body {
 
 .logo {
     padding: 5px;
-    border-radius: 100%;
+    width: auto;
+    height: 45px;
 }
 
 .top-nav-text-holder {
@@ -95,11 +99,11 @@ body {
     display:block;
 }
 
-.bot-nav {
-    height: 300px;
 
-    background: rgb(145,229,246);
-    background: linear-gradient(0deg, rgba(145,229,246,1) 0%, rgba(255,230,109,1) 100%);
+
+.top-bot-nav {
+
+    height: 100px;
 
     display: grid;
     place-items: center;
@@ -107,8 +111,7 @@ body {
 }
 
 .search-bar {
-    width: 35%;
-    height: 15%;
+    margin: auto;
 
     border: solid #4B4844;
     border-radius: 15px;
@@ -119,6 +122,10 @@ body {
     justify-content: center;
     position: relative;
     align-items: center; 
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
     
 }
 
@@ -126,7 +133,7 @@ body {
 
     width: 90%;
 
-    font-size: 30px;
+    font-size: 4em;
     
     outline: none;
     border: none;
@@ -145,12 +152,67 @@ body {
 
 .loop-holder {
 
-    width: 20px;
-    height: 20px;
+    width: auto;
+    height: auto;
 
     display: grid;
     place-items: center;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
+
+.button {
+    position: relative;
+    background-color: #4B4844;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    margin: 2px;
+    border-radius: 15px;
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+
+  }
+  
+  .button:after {
+    content: "";
+    background: rgba(255,230,109,1);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
 
 
 

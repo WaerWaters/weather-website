@@ -117,19 +117,3 @@ function initMap(latValue, lngValue) {
 
 
 
-/*async function getCities() {
-    let raw = {
-        "country": "nigeria"
-    };
-
-    let requestOptions = {
-    method: 'POST',
-    body: raw,
-    redirect: 'follow'
-    };
-
-    const response = await fetch("https://countriesnow.space/api/v0.1/countries/cities", requestOptions)
-    return await response.json();
-}*/
-
-

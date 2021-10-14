@@ -63,7 +63,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[day].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[day].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[day].main.temp)}°`;
                 if (data.list[day].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[day].rain["3h"]}mm precipitation`
                 } else {
@@ -112,7 +112,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time].main.temp)}°`;
                 if (data.list[time].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time].rain["3h"]}mm precipitation`
                 } else {
@@ -161,7 +161,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time].main.temp)}°`;
                 if (data.list[time].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time].rain["3h"]}mm precipitation`
                 } else {
@@ -210,7 +210,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time].main.temp)}°`;
                 if (data.list[time].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time].rain["3h"]}mm precipitation`
                 } else {
@@ -259,7 +259,7 @@ function getCity() {
                     src.appendChild(img); 
                 }
                 document.querySelector("#description" + day.toString()).textContent = `${data.list[time-1].weather[0].description}`
-                document.querySelector("#temp" + day.toString()).textContent = `${data.list[time-1].main.temp}°`;
+                document.querySelector("#temp" + day.toString()).textContent = `${kelvinToCelcius(data.list[time-1].main.temp)}°`;
                 if (data.list[time-1].weather[0].main == "Rain") {
                     document.querySelector("#rain" + day.toString()).textContent = `${data.list[time-1].rain["3h"]}mm precipitation`
                 } else {
@@ -287,6 +287,10 @@ function getCity() {
             }
         }
     }) 
+}
+
+function kelvinToCelcius(data) {
+	return (data - 273.15).toFixed(2);
 }
 
 

@@ -1,2 +1,2 @@
 # WaerWaters.github.io
-vejr trucker
+Brug home.html for at bruge hjemmesiden
